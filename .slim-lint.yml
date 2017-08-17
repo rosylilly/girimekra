@@ -1,0 +1,9 @@
+include:
+  - "app/views/**/*.slim"
+
+exclude:
+  - "vendor/**/*.slim"
+
+linters:
+  LineLength:
+    max: 180
