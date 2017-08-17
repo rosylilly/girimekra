@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        id: "ID"
+        nickname: "Nickname"
+        mastodon_server: "MastodonServer"
+        bearer_token: "BearerToken"

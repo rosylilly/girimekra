@@ -1,0 +1,21 @@
+- error ||= false
+
+.modal.is-active
+  .modal-background
+  .modal-card
+    header.modal-card-head
+      p.modal-card-title Login
+    section.modal-card-body
+      - if error
+        .notification.is-warning
+          p 不正なドメイン名です
+
+      = form_tag login_path do
+        .field
+          label.label(for="domain") インスタンスのドメイン
+        .field.has-addons
+          .control.is-expanded
+            input.input.is-large(type="text" name="domain" id="domain" placeholder="mstdn.jp" required="required")
+          .control
+            input.button.is-large.is-primary(type="submit" value="ログイン")
+    footer.modal-card-foot

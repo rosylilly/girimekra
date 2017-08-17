@@ -1,0 +1,14 @@
+- running ||= false
+.hero.is-fullheight
+  .hero-body
+    .container.has-text-centered
+      .columns
+        .column.is-6.is-offset-3
+          - if running
+            .notification.is-warning
+              p 全トゥートの削除を開始しました。
+              p 完了には時間がかかる可能性があります。
+
+          p #{user.nickname}@#{user.mastodon_server.domain} さんのトゥートをすべて削除します
+          = form_tag operations_path do
+            = submit_tag "実行", class: 'button is-danger is-large is-fullwidth'

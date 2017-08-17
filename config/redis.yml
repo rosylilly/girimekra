@@ -1,0 +1,21 @@
+default: &default
+  connection:
+    host: localhost
+    port: 6379
+    network_timeout: 5
+    namespace: girimekra_<%= Rails.env %>
+  pool:
+    size: 25
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  connection:
+    url: <%= ENV['REDIS_URL'] %>
+  pool:
+    size: <%= ENV['REDIS_POOL_SIZE'] || 25 %>

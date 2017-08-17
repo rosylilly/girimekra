@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      mastodon_server: "MastodonServer"
+    attributes:
+      mastodon_server:
+        id: "ID"
+        domain: "Domain"
+        client_id: "ClientId"
+        client_secret: "ClientSecret"
