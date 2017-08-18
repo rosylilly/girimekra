@@ -13,6 +13,7 @@ gem 'rails', '~> 5.1.3'
 
 gem 'canonical-rails'
 gem 'coffee-rails', '~> 4.2'
+gem 'foreman'
 gem 'hiredis'
 gem 'jbuilder', '~> 2.5'
 gem 'locale_kit'
