@@ -1,6 +1,9 @@
 {
   "name": "girimekra",
   "version": "0.0.1",
+  "engines": {
+    "node": "7.9.0"
+  },
   "main": "index.js",
   "author": "Sho Kusano <sho-kusano@space-pirates.jp>",
   "license": "MIT",
