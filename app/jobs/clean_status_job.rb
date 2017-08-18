@@ -8,7 +8,7 @@ class CleanStatusJob < ApplicationJob
 
     statuses = @user.rest_client.statuses(@user.uid, limit: 40)
 
-    until statuses.empty?
+    until statuses.size.zero?
       statuses.each do |status|
         DestroyStatusJob.perform_later(@user.id, status.id)
       end
