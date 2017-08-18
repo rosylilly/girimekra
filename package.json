@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Sho Kusano <sho-kusano@space-pirates.jp>",
   "license": "MIT",
+  "scripts": {
+    "heroku-postbuild": "gulp build"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
