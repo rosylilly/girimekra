@@ -3,7 +3,9 @@
 class OperationsController < ApplicationController
   before_action :check_login, only: %i[new create]
 
-  def root; end
+  def root
+    @queue = Sidekiq::Queue.new.size
+  end
 
   def new; end
 
