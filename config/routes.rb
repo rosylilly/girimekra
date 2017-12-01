@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   resources :operations, only: %i[new create]
 
+  get '/stream/queue', to: 'stream#queue'
+
   root to: 'operations#root'
 end

@@ -10,7 +10,7 @@ class CleanStatusJob < ApplicationJob
     options = { limit: 40 }
     options[:max_id] = max_id if max_id > 0
 
-    sleep 1 # for mastodon performance
+    sleep 3 # for mastodon performance
 
     statuses = @user.rest_client.statuses(@user.uid, limit: 40)
     statuses.each do |status|

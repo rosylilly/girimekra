@@ -26,6 +26,7 @@ gem 'premailer-rails'
 gem 'puma', '~> 3.7'
 gem 'rails-i18n'
 gem 'redis', '>= 3.2.0', require: %w[redis redis/connection/hiredis]
+gem 'redis-namespace'
 gem 'ridgepoler-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sidekiq'
