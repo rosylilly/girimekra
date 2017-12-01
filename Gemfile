@@ -29,6 +29,7 @@ gem 'redis', '>= 3.2.0', require: %w[redis redis/connection/hiredis]
 gem 'redis-namespace'
 gem 'ridgepoler-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'sentry-raven'
 gem 'sidekiq'
 gem 'sitemap_generator'
 gem 'slim-rails'

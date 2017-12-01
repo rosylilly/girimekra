@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class StreamController < ApplicationController
   include ActionController::Live
 
   def queue
-    response.headers["Content-Type"] = "text/event-stream"
+    response.headers['Content-Type'] = 'text/event-stream'
 
     loop do
       queue = Sidekiq::Queue.new.size
@@ -11,9 +13,9 @@ class StreamController < ApplicationController
       sleep 1
     end
   rescue IOError
-    logger.info "Stream closed"
+    logger.info 'Stream closed'
   rescue ActionController::Live::ClientDisconnected
-    logger.info "Stream closed"
+    logger.info 'Stream closed'
   ensure
     response.stream.close
   end
